@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "context-engineering-collection": {
+      "source": "muratcankoylan/agent-skills-for-context-engineering",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "df67ded00f18bf31f65a782dbcdcbeaedc42b5aa65137784bb163abbad7c5952"
+    },
     "copywriting": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
