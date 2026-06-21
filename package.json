@@ -4,5 +4,8 @@
     "@fontsource/rajdhani": "^5.2.7",
     "puppeteer": "^23.11.1",
     "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.6.120"
   }
 }
