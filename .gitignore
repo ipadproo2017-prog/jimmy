@@ -2,3 +2,5 @@ node_modules/
 render_*.png
 package-lock.json
 *.zip
+rtx-video/renders/
+rtx-video/.hyperframes/
