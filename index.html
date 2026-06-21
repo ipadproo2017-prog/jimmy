@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSI GeForce RTX 5090 32G GAMING TRIO OC</title>
+  <meta name="description" content="MSI GeForce RTX 5090 32G GAMING TRIO OC — Puissance absolue. Architecture Blackwell. 32 Go GDDR7." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">INITIALISATION&nbsp;<span id="loadPct">0</span>%</div>
+  </div>
+
+  <!-- 3D Canvas -->
+  <canvas id="scene"></canvas>
+
+  <!-- Scanline / grain overlay -->
+  <div class="overlay-grid"></div>
+  <div class="overlay-vignette"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-brand">
+      <span class="brand-msi">MSI</span>
+      <span class="brand-sep">/</span>
+      <span class="brand-line">GAMING&nbsp;TRIO</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#perf">Performance</a>
+      <a href="#specs">Specs</a>
+      <a href="#cooling">Refroidissement</a>
+      <a href="#cta">Précommander</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-kicker">ARCHITECTURE&nbsp;BLACKWELL</div>
+      <h1 class="hero-title">
+        <span class="line">RTX</span>
+        <span class="line glow">5090</span>
+      </h1>
+      <p class="hero-sub">GeForce RTX&nbsp;5090 32G&nbsp;·&nbsp;GAMING TRIO OC</p>
+      <p class="hero-desc">La puissance n'est plus une limite. Elle devient une signature.</p>
+      <div class="hero-scroll">
+        <span>DÉFILER</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="panel" id="perf">
+      <div class="panel-inner">
+        <div class="panel-tag">01 — PERFORMANCE</div>
+        <h2 class="panel-title">Au-delà du <em>réel.</em></h2>
+        <p class="panel-text">
+          Le ray tracing de nouvelle génération et le DLSS propulsé par l'IA repoussent
+          chaque pixel. 4K, 8K, 240&nbsp;Hz — le matériel n'attend plus le jeu, c'est le jeu
+          qui essaie de suivre.
+        </p>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num" data-target="32" data-suffix=" Go">0</div><div class="stat-label">GDDR7</div></div>
+          <div class="stat"><div class="stat-num" data-target="21760" data-suffix="">0</div><div class="stat-label">Cœurs CUDA</div></div>
+          <div class="stat"><div class="stat-num" data-target="512" data-suffix="-bit">0</div><div class="stat-label">Bus mémoire</div></div>
+          <div class="stat"><div class="stat-num" data-target="240" data-suffix=" Hz+">0</div><div class="stat-label">4K Gaming</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="panel align-right" id="specs">
+      <div class="panel-inner">
+        <div class="panel-tag">02 — SPÉCIFICATIONS</div>
+        <h2 class="panel-title">L'ingénierie <em>extrême.</em></h2>
+        <div class="spec-list">
+          <div class="spec-row"><span>GPU</span><span>NVIDIA Blackwell GB202</span></div>
+          <div class="spec-row"><span>Mémoire</span><span>32 Go GDDR7</span></div>
+          <div class="spec-row"><span>Interface</span><span>PCIe 5.0 ×16</span></div>
+          <div class="spec-row"><span>Sorties</span><span>3× DisplayPort 2.1b · 1× HDMI 2.1b</span></div>
+          <div class="spec-row"><span>Alimentation</span><span>16-pin (12V-2×6) · 600 W</span></div>
+          <div class="spec-row"><span>Boost Clock</span><span>OC Mode — boosté en usine</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COOLING -->
+    <section class="panel" id="cooling">
+      <div class="panel-inner">
+        <div class="panel-tag">03 — REFROIDISSEMENT TRI FROZR</div>
+        <h2 class="panel-title">Trois ventilateurs.<br/><em>Zéro compromis.</em></h2>
+        <p class="panel-text">
+          Le système TRI FROZR avec ventilateurs TORX et caloducs en cuivre dissipe la chaleur
+          avant qu'elle n'existe. Mode silencieux 0&nbsp;dB au repos, performance brute sous charge.
+          Et le RGB Mystic Light qui transforme ta machine en œuvre d'art.
+        </p>
+        <div class="chip-row">
+          <span class="chip">TORX Fan 5.0</span>
+          <span class="chip">Zero Frozr</span>
+          <span class="chip">Mystic Light RGB</span>
+          <span class="chip">Backplate métal</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <h2 class="cta-title">Prêt à <span class="glow">dominer ?</span></h2>
+      <p class="cta-sub">MSI GeForce RTX 5090 32G GAMING TRIO OC</p>
+      <a href="#" class="cta-btn" onclick="return false;">PRÉCOMMANDER</a>
+      <p class="cta-fine">Édition limitée · Quantités restreintes</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Page concept à but de démonstration. MSI, GeForce et RTX sont des marques de leurs propriétaires respectifs.</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
