@@ -1,0 +1,10 @@
+node_modules/
+render_*.png
+package-lock.json
+*.zip
+rtx-video/renders/
+rtx-video/.hyperframes/
+.agents/skills/
+.claude/skills/
+agent/
+game_*.png
