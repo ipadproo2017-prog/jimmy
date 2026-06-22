@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-void: #050507;
+  --color-frost: #e8f2f8;
+  --color-cyan-glow: #5fe3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Lenis controls scroll; keep native smooth off to avoid conflicts */
+  scroll-behavior: auto;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-void);
+  color: var(--color-frost);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide native cursor only on devices that have a fine pointer (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--color-cyan-glow);
+  color: var(--color-void);
+}
+
+/* Lenis recommended styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ---- Reusable utilities ---- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Frosted glass surface */
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(159, 212, 240, 0.08),
+      rgba(27, 59, 95, 0.04)
+    );
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    border: 1px solid rgba(159, 212, 240, 0.12);
+  }
+
+  .glass-strong {
+    background: rgba(10, 14, 20, 0.55);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(159, 212, 240, 0.16);
+  }
+
+  /* Cyan glow text accent */
+  .glow-text {
+    text-shadow: 0 0 24px rgba(95, 227, 255, 0.45);
+  }
+
+  /* Gradient frost text */
+  .text-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #9fd4f0 60%, #4fa8d8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Thin uppercase label */
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.35em] text-glacier-300/80 font-medium;
+  }
+}
+
+/* Film grain / noise overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .noise-overlay {
+    display: none;
+  }
+}
+
+/* Visible focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-cyan-glow);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
